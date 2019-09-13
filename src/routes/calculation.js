@@ -27,7 +27,10 @@ router.post('/', (req, res, next) =>{
                 var discont = (Valor*2)/100;
                 var ValorLiquido = Valor-discont; 
                 return res.json({ ValorLiquido });
-            }    
+            } 
+
+            else
+                return res.status(400).send({ erro: "Tipo Invalido" });   
         }
         // Bandeira MASTER
         else if(Bandeira.toLowerCase() == "master"){
@@ -49,10 +52,13 @@ router.post('/', (req, res, next) =>{
                 var discont = (Valor*1.98)/100;
                 var ValorLiquido = Valor-discont; 
                 return res.json({ ValorLiquido });
-            }    
+            }  
+            
+            else
+                return res.status(400).send({ erro: "Tipo Invalido" });
         }
         else
-            return res.status(400).send({ erro: "Esta bandeira não existe" });
+            return res.status(400).send({ erro: "Bandeira Invalida" });
     }
 
     // Adquirente B
@@ -78,7 +84,10 @@ router.post('/', (req, res, next) =>{
                 var discont = (Valor*2.08)/100;
                 var ValorLiquido = Valor-discont; 
                 return res.json({ ValorLiquido });
-            }    
+            }   
+
+            else
+                return res.status(400).send({ erro: "Tipo Invalido" }); 
         }
         // Bandeira MASTER
         else if(Bandeira.toLowerCase() == "master"){
@@ -100,10 +109,13 @@ router.post('/', (req, res, next) =>{
                 var discont = (Valor*1.75)/100;
                 var ValorLiquido = Valor-discont; 
                 return res.json({ ValorLiquido });
-            }    
+            }  
+            
+            else
+                return res.status(400).send({ erro: "Tipo Invalido" });
         }
         else
-            return res.status(400).send({ erro: "Esta bandeira não existe" });
+            return res.status(400).send({ erro: "Bandeira Invalida" });
     }
     // Adquirente C
     else if(Adquirente.toUpperCase() == "C"){
@@ -128,7 +140,10 @@ router.post('/', (req, res, next) =>{
                 var discont = (Valor*2.16)/100;
                 var ValorLiquido = Valor-discont; 
                 return res.json({ ValorLiquido });
-            }    
+            }
+            
+            else
+                return res.status(400).send({ erro: "Tipo Invalido" });
         }
         // Bandeira MASTER
         else if(Bandeira.toLowerCase() == "master"){
@@ -150,11 +165,16 @@ router.post('/', (req, res, next) =>{
                 var discont = (Valor*1.58)/100;
                 var ValorLiquido = Valor-discont; 
                 return res.json({ ValorLiquido });
-            }    
+            }  
+            
+            else
+                return res.status(400).send({ erro: "Tipo Invalido" });
         }
         else
-            return res.status(400).send({ erro: "Esta bandeira não existe" });
+            return res.status(400).send({ erro: "Bandeira Invalida" });
     }
+    else
+        return res.status(400).send({ erro: "Adquirente Invalido" });
 });
 
 module.exports = router;
