@@ -36,7 +36,7 @@ router.post('/', (req, res, next) =>{
             } 
 
             else
-                return res.status(400).send({ erro: "Tipo Invalido" });   
+                return res.status(400).send({ erro: "Tipo de pagamento Invalido" });   
         }
         // Bandeira MASTER
         else if(Bandeira.toLowerCase() == "master"){
@@ -67,7 +67,7 @@ router.post('/', (req, res, next) =>{
             }  
             
             else
-                return res.status(400).send({ erro: "Tipo Invalido" });
+                return res.status(400).send({ erro: "Tipo de pagamento Invalido" });
         }
         else
             return res.status(400).send({ erro: "Bandeira Invalida" });
@@ -105,7 +105,7 @@ router.post('/', (req, res, next) =>{
             }   
 
             else
-                return res.status(400).send({ erro: "Tipo Invalido" }); 
+                return res.status(400).send({ erro: "Tipo de pagamento Invalido" }); 
         }
         // Bandeira MASTER
         else if(Bandeira.toLowerCase() == "master"){
@@ -136,7 +136,7 @@ router.post('/', (req, res, next) =>{
             }  
             
             else
-                return res.status(400).send({ erro: "Tipo Invalido" });
+                return res.status(400).send({ erro: "Tipo de pagamento Invalido" });
         }
         else
             return res.status(400).send({ erro: "Bandeira Invalida" });
@@ -173,7 +173,7 @@ router.post('/', (req, res, next) =>{
             }
             
             else
-                return res.status(400).send({ erro: "Tipo Invalido" });
+                return res.status(400).send({ erro: "Tipo de pagamento Invalido" });
         }
         // Bandeira MASTER
         else if(Bandeira.toLowerCase() == "master"){
@@ -204,7 +204,7 @@ router.post('/', (req, res, next) =>{
             }  
             
             else
-                return res.status(400).send({ erro: "Tipo Invalido" });
+                return res.status(400).send({ erro: "Tipo de pagamento Invalido" });
         }
         else
             return res.status(400).send({ erro: "Bandeira Invalida" });

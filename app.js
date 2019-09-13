@@ -8,8 +8,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 //Caminho das Rotas 
-const value = require('./routes/calculation');
-const table = require('./routes/mrd_table')
+const value = require('./src/routes/calculation');
+const table = require('./src/routes/mrd_table')
 
 //Chamada das Rotas
 app.use('/transaction', value);
